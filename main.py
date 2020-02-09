@@ -25,6 +25,18 @@ def print_board(board):
             else:
                 print(str(board[i][j]) + " ", end="")
 
+def is_board_valid(board, pos, num):
+    # check column
+    for i in range(len(board)):
+        if (board[i][pos[1]] == num) and (pos[1] = != i):
+            return False
+
+    # check row
+    for i in range(len(board[0])):
+        if (board[pos[0]][i] == num) and (pos[i] != i):
+            return False
+
+
 
 # finds an empty square on the grid
 def find_empty_square(board):

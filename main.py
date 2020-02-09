@@ -11,7 +11,7 @@ board = [
 ]
 
 
-# function that prints a sudoku grid
+# displays a sudoku grid
 def print_board(board):
     for i in range(len(board)):
         if (i % 3 == 0) and (i != 0):
@@ -24,3 +24,12 @@ def print_board(board):
                 print(str(board[i][j]))
             else:
                 print(str(board[i][j]) + " ", end="")
+
+
+# finds an empty square on the grid
+def find_empty_square(board):
+    for i in range(len(board)):
+        for j in range(len(board[0])):
+            if board[i][j] == 0:
+                # row, column
+                return (i, j)

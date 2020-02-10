@@ -35,6 +35,16 @@ def is_board_valid(board, pos, num):
     for i in range(len(board[0])):
         if (board[pos[0]][i] == num) and (pos[i] != i):
             return False
+    
+    # check box (3x3)
+    box_x, box_y = pos[1]//3, pos[0]//3
+
+    for i in range(box_y*3, box_y*3+3):
+        for j in range(box_x*3, box_x*3+3):
+            if ((i, j) != pos) and (board([i][j]) == num):
+                return False
+    
+    return True
 
 
 
@@ -45,3 +55,4 @@ def find_empty_square(board):
             if board[i][j] == 0:
                 # row, column
                 return (i, j)
+    return None

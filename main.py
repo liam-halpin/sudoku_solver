@@ -1,15 +1,3 @@
-board = [
-    [5, 3, 0, 0, 7, 0, 0, 0, 0],
-    [6, 0, 0, 1, 9, 5, 0, 0, 0],
-    [0, 9, 8, 0, 0, 0, 0, 6, 0],
-    [8, 0, 0, 0, 6, 0, 0, 0, 3],
-    [4, 0, 0, 8, 0, 3, 0, 0, 1],
-    [7, 0, 0, 0, 2, 0, 0, 0, 6],
-    [0, 6, 0, 0, 0, 0, 2, 8, 0],
-    [0, 0, 0, 4, 1, 9, 0, 0, 5],
-    [0, 0, 0, 0, 8, 0, 0, 7, 9]
-]
-
 # Recursive function to solve the grid
 def solve(board):
     find = find_empty_square(board)
@@ -26,7 +14,7 @@ def solve(board):
             board[row][col] = 0
     return False
 
-
+# Checks if the provided board is valid based on sudoku rules
 def is_board_valid(board, pos, num):
     # Check column (y)
     for i in range(len(board)):
@@ -72,8 +60,3 @@ def find_empty_square(board):
                 # row, column
                 return (i, j)
     return None
-
-print_board(board)
-solve(board)
-print("\n")
-print_board(board)

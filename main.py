@@ -1,3 +1,16 @@
+board = [
+    [0, 2, 0, 6, 0, 8, 0, 0, 0],
+    [5, 8, 0, 0, 0, 9, 7, 0, 0],
+    [0, 0, 0, 0, 4, 0, 0, 0, 0],
+    [3, 7, 0, 0, 0, 0, 5, 0, 0],
+    [6, 0, 0, 0, 0, 0, 0, 0, 4],
+    [0, 0, 8, 0, 0, 0, 0, 1, 3],
+    [0, 0, 0, 0, 2, 0, 0, 0, 0],
+    [0, 0, 9, 8, 0, 0, 0, 3, 6],
+    [0, 0, 0, 3, 0, 6, 0, 9, 0]
+]
+
+
 # Recursive function to solve the grid
 def solve(board):
     find = find_empty_square(board)
@@ -60,3 +73,6 @@ def find_empty_square(board):
                 # row, column
                 return (i, j)
     return None
+
+solve(board)
+print_board(board)

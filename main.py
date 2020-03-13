@@ -12,6 +12,7 @@
 
 import time  # used for timing solver
 
+
 """
  board: the sudoku grid to solve
 
@@ -32,6 +33,7 @@ def solve(board):
                 return True
             board[row][col] = 0
     return False
+
 
 """
  board: the sudoku grid
@@ -61,6 +63,7 @@ def is_board_valid(board, pos, num):
 
     return True
 
+
 """
  board: the sudoku grid
 
@@ -73,6 +76,7 @@ def find_empty_square(board):
                 # row, column
                 return (i, j)
     return None
+
 
 """
  board: the sudoku grid
